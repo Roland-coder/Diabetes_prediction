@@ -9,7 +9,7 @@ def get_diabetes(pregnancies, glucose, bloodpressure, skinthickness, insulin, bm
     with open('./artifacts/columns.json', 'r') as f:
         __data_columns = json.load(f)['data_columns']
     global __model
-    with open("./artifacts/diabetes_prediction_model", 'rb') as f:
+    with open("./artifacts/diabetes_prediction_model.pkl", 'rb') as f:
         __model = pickle.load(f)
         print("Loading saved artifacts")
     x = np.zeros(len(__data_columns))
